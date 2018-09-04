@@ -5,7 +5,6 @@
   <!-- Responsiveness: added meta tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <meta http-equiv="X-UA-Compatible" content="ie-edge"> -->
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
@@ -15,6 +14,7 @@
 <body>
   <header>
     <nav>
+      <!-- Accessibility: added tab index and aria labels / roles -->
       <h1><a aria-label="Restaurant Reviews Home Page" tabindex="1" href="/">Restaurant Reviews</a></h1>
     </nav>
   </header>
@@ -26,9 +26,11 @@
     <section>
       <div class="filter-options">
         <h2>Filter Results</h2>
+        <!-- Accessibility: added tab index and aria labels / roles -->
         <select role="tablist" tabindex="2" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
+        <!-- Accessibility: added tab index and aria labels / roles -->
         <select role="tablist" tabindex="4" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
