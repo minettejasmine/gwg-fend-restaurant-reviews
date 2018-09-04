@@ -1,3 +1,19 @@
+/* Service Worker: establish a service worker by registering it */
+/* conditional check for browser support */
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+ /* call register method with string file url */
+  .register('/sw.js')
+  .then(function() {
+    /* confirm registration via console.log */
+    console.log('service worker registration successful!');
+  })
+  /* catch and log errors to console */
+  .catch(error => {
+    console.log('sewrvice worker registration failed');
+  });
+}
+
 let restaurants,
   neighborhoods,
   cuisines
@@ -215,4 +231,3 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
-
